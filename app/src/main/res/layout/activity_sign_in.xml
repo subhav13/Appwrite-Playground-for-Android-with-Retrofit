@@ -86,6 +86,7 @@
         android:layout_marginTop="20sp"
         android:text="@string/login"
         android:textSize="22sp"
+
         android:textAllCaps="false"
         android:fontFamily="@font/aldrich"
         android:textColor="@android:color/white"

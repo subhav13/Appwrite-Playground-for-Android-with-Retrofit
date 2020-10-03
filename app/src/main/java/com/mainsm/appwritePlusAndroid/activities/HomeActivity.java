@@ -60,13 +60,7 @@ public class HomeActivity extends AppCompatActivity {
     private void initLogic() {
         logout.setOnClickListener(v -> {
             progressBar.setVisibility(View.VISIBLE);
-            editor.clear();
-            editor.apply();
-            startActivity(new Intent(HomeActivity.this, MainActivity.class));
-            Toast.makeText(getApplicationContext(), R.string.logged_out, Toast.LENGTH_LONG).show();
-            progressBar.setVisibility(View.INVISIBLE);
-
-            finish();
+            logoutFromCurrentDeviceOnly();
         });
 
         logoutAll.setOnClickListener(v -> {
@@ -75,9 +69,46 @@ public class HomeActivity extends AppCompatActivity {
         });
     }
 
+    private void logoutFromCurrentDeviceOnly() {
+        String url = Constants.BASE_URL + "account/sessions/" + "current";
+        RetrofitClient.getInstance(HomeActivity.this).getApi().deleteUserSession(url)
+                .enqueue(new Callback<ResponseBody>() {
+                    @Override
+                    public void onResponse(@NotNull Call<ResponseBody> call, @NotNull Response<ResponseBody> response) {
+                        if (response.isSuccessful()){
+                            progressBar.setVisibility(View.INVISIBLE);
+                            Log.e(TAG, "onResponse: "+ response.body() + response.message() + response.toString() );
+                            editor.clear();
+                            editor.apply();
+                            startActivity(new Intent(HomeActivity.this, MainActivity.class));
+                            Toast.makeText(getApplicationContext(), R.string.logged_out, Toast.LENGTH_LONG).show();
+                            finish();
+                        }else {
+                            Toast.makeText(getApplicationContext(), R.string.went_wrong, Toast.LENGTH_LONG).show();
+                            progressBar.setVisibility(View.INVISIBLE);
+                            try {
+                                if (response.errorBody() != null) {
+                                    Log.e(TAG, "onResponse: " + response.errorBody().string() );
+                                }
+                            } catch (IOException e) {
+                                e.printStackTrace();
+                            }
+                        }
+
+                    }
+
+                    @Override
+                    public void onFailure(@NotNull Call<ResponseBody> call, @NotNull Throwable t) {
+                        Log.e(TAG, "onFailure: " + t.getMessage() );
+                        Toast.makeText(getApplicationContext(), R.string.went_wrong, Toast.LENGTH_LONG).show();
+                        progressBar.setVisibility(View.INVISIBLE);
+                    }
+                });
+    }
+
     private void logoutFromAllDevice() {
         String token = PreferenceManager.getDefaultSharedPreferences(HomeActivity.this).getString(Constants.LOGIN_TOKEN, "");
-        String url = Constants.BASE_URL + "account/sessions/" + "current";
+        String url = Constants.BASE_URL + "account/sessions/" + token;
         RetrofitClient.getInstance(HomeActivity.this).getApi().deleteUserSession(url)
                 .enqueue(new Callback<ResponseBody>() {
                     @Override
