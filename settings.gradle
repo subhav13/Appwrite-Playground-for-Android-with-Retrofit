@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Playground for android with restful API"
+rootProject.name = "Appwrite Android Demo"
