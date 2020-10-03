@@ -51,7 +51,7 @@ For security issues, kindly email us [security@appwrite.io](mailto:security@appw
 Join our growing community around the world! Follow us on [Twitter](https://twitter.com/appwrite_io), [Facebook Page](https://www.facebook.com/appwrite.io), [Facebook Group](https://www.facebook.com/groups/appwrite.developers/) or join our Discord Server [Discord community](https://discord.gg/GSeTUeA) for more help, ideas and discussions.  
 
 ***
- #This Repository Created By :
+# This Repository Created By :
  
  **Subhav Mathur**
  
