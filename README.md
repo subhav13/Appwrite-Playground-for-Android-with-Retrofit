@@ -3,7 +3,9 @@
 
 This is a playground demo app for Android with Retrofit. We are using direct HTTP request for using Appwrite functionalities within android framework.
 
-<img src="ss1.png" width="200"> <img src="ss2.png" width="200"> <img src="ss3.png" width="200">  <img src="ss4.png" width="200">
+<img src="ss1.PNG" width="200"> <img src="ss2.PNG" width="200">
+
+<img src="ss3.PNG" width="200">  <img src="ss4.PNG" width="200">
 
 
 
