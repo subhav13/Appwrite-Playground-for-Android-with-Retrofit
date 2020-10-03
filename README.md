@@ -43,7 +43,6 @@ All code contributions - including those of people having commit access - must g
 
 We truly ❤️ pull requests! If you wish to help, you can learn more about how you can contribute to this project in the [contribution guide]([CONTRIBUTING.md](https://github.com/appwrite/appwrite/blob/master/CONTRIBUTING.md)).
 
-Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
 
 ## Security
 
