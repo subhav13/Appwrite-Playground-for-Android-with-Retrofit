@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="20sp"
+    android:layout_height="match_parent"
+    tools:context="com.mainsm.appwritePlusAndroid.activities.RegisterActivity">
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="20sp"
+    android:layout_height="match_parent"
+    tools:context="com.mainsm.appwritePlusAndroid.activities.RegisterActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register"
+        android:layout_gravity="center"
+        android:textColor="#f02e65"
+        android:fontFamily="@font/aldrich"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:layout_marginTop="20sp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:src="@drawable/logo"
+        android:layout_marginTop="20sp"
+        android:layout_gravity="center"/>
+    <EditText
+        android:id="@+id/enterName"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="20sp"
+        android:background="@drawable/etsignupbackground"
+        android:hint="@string/enter_name"
+        android:textSize="16sp"
+        android:inputType="textEmailAddress"
+        android:paddingTop="15sp"
+        android:textColor="#131b37"
+        android:paddingBottom="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#9BA4BF"/>
+    <EditText
+        android:id="@+id/enterEmail"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/etsignupbackground"
+        android:hint="@string/enter_e_mail_address"
+        android:textSize="16sp"
+        android:inputType="textEmailAddress"
+        android:paddingTop="15sp"
+        android:layout_marginBottom="10dp"
+        android:textColor="#131b37"
+        android:paddingBottom="15dp"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp"
+        android:textColorHint="#9BA4BF"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:passwordToggleContentDescription="description"
+        app:passwordToggleEnabled="true"
+        app:hintAnimationEnabled="false"
+        app:boxBackgroundMode="none"
+        app:hintEnabled="false">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/enterPassword"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/etsignupbackground"
+            android:hint="@string/enter_password"
+            android:textSize="16sp"
+            android:inputType="textPassword"
+            android:textColor="#131b37"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:textColorHint="#9BA4BF"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"/>
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:layout_width="350dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20sp"
+        android:text="@string/sign_up"
+        android:textSize="22sp"
+        android:textAllCaps="false"
+        android:fontFamily="@font/aldrich"
+        android:textColor="@android:color/white"
+        android:background="@drawable/loginbackground"
+        android:id="@+id/signUpBtn"/>
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/Widget.AppCompat.ProgressBar"
+        android:layout_marginTop="10dp"
+        android:visibility="invisible"
+        android:layout_gravity="center"
+        android:id="@+id/progress_bar"/>
+
+
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

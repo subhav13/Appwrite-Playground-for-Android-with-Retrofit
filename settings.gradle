@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Playground for android with restful API"

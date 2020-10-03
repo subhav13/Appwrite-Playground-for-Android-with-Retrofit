@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Playground for android with restful API</string>
+    <string name="enter_e_mail_address">Enter E-Mail Address</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="login">Login</string>
+    <string name="sign_in_to_your_awesome_appwrite_account">Sign in to your AWESOME APPWRITE account !</string>
+    <string name="signup">Don\'t have an Appwrite Account yet? Sign Up now!</string>
+    <string name="enter_valid_email">Enter a valid email address</string>
+    <string name="invalid_cred">Invalid Credentials or No account with email address</string>
+    <string name="register">Register Your Account</string>
+    <string name="enter_name">Enter Full Name</string>
+    <string name="sign_up">Sign-Up</string>
+    <string name="acc_exist">Account Already Exists</string>
+    <string name="went_wrong">Something went wrong! Try again</string>
+    <string name="logout">Logout</string>
+    <string name="logout_from_all">Logout From All Devices</string>
+    <string name="logged_out">Logged out successfully</string>
+    <string name="acc_created">Account Created Successfully</string>
+    <string name="kudoos">Kudoos, You have successfully logged in to your Awesome Appwrite Account…cheers</string>
+    <string name="more_feature">More features are coming soon.\n\nMeanwhile you can also contribute to the project.\n\n#Adios</string>
+</resources>
